@@ -14,7 +14,7 @@ with gr.Blocks() as demo:
 
     def bot(history):
         user_message = history[-1][0]
-        bot_message = agent(user_message)
+        bot_message = agent(user_message,model_name="gpt-4")
         history[-1][1] = bot_message
         return history
 

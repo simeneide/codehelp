@@ -68,7 +68,7 @@ class Agent:
         agent_executor = self.build_agent(model_name=model_name)
         return agent_executor.run(text)
 
-    def build_agent(self, model_name="gpt-3.5-turbo"):
+    def build_agent(self, model_name):
         file_contents = load_files_from_directory(".")
 
         prefix = f"""You are an excellent software developer that helps the user built their app for their need by suggesting changes to the existing code base. The current codebase looks like this:
